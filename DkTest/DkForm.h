@@ -81,6 +81,12 @@ namespace DkTest {
 	private: System::Windows::Forms::Label^  label11;
 	private: System::Windows::Forms::Label^  label9;
 	private: System::Windows::Forms::Label^  lblExecTime;
+	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::Label^  label16;
 
 
 	private:
@@ -121,6 +127,12 @@ namespace DkTest {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->lblReturnVal = (gcnew System::Windows::Forms::Label());
 			this->btnClose = (gcnew System::Windows::Forms::Button());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -130,7 +142,7 @@ namespace DkTest {
 			this->txtData->Name = L"txtData";
 			this->txtData->Size = System::Drawing::Size(68, 31);
 			this->txtData->TabIndex = 3;
-			this->txtData->Text = L"0";
+			this->txtData->Text = L"1.0";
 			// 
 			// txtIDXB
 			// 
@@ -138,7 +150,7 @@ namespace DkTest {
 			this->txtIDXB->Name = L"txtIDXB";
 			this->txtIDXB->Size = System::Drawing::Size(68, 31);
 			this->txtIDXB->TabIndex = 4;
-			this->txtIDXB->Text = L"0";
+			this->txtIDXB->Text = L"1";
 			// 
 			// txtIDXE
 			// 
@@ -146,7 +158,7 @@ namespace DkTest {
 			this->txtIDXE->Name = L"txtIDXE";
 			this->txtIDXE->Size = System::Drawing::Size(68, 31);
 			this->txtIDXE->TabIndex = 5;
-			this->txtIDXE->Text = L"0";
+			this->txtIDXE->Text = L"1200";
 			// 
 			// txtThresh1
 			// 
@@ -154,7 +166,7 @@ namespace DkTest {
 			this->txtThresh1->Name = L"txtThresh1";
 			this->txtThresh1->Size = System::Drawing::Size(68, 31);
 			this->txtThresh1->TabIndex = 6;
-			this->txtThresh1->Text = L"0";
+			this->txtThresh1->Text = L"0.1";
 			// 
 			// label3
 			// 
@@ -242,13 +254,14 @@ namespace DkTest {
 			this->txtWinLen->Name = L"txtWinLen";
 			this->txtWinLen->Size = System::Drawing::Size(68, 31);
 			this->txtWinLen->TabIndex = 15;
-			this->txtWinLen->Text = L"0";
+			this->txtWinLen->Text = L"5";
 			// 
 			// btnSCWR
 			// 
+			this->btnSCWR->Enabled = false;
 			this->btnSCWR->Font = (gcnew System::Drawing::Font(L"Calibri", 7.875F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnSCWR->Location = System::Drawing::Point(61, 465);
+			this->btnSCWR->Location = System::Drawing::Point(61, 469);
 			this->btnSCWR->Name = L"btnSCWR";
 			this->btnSCWR->Size = System::Drawing::Size(977, 36);
 			this->btnSCWR->TabIndex = 17;
@@ -271,9 +284,10 @@ namespace DkTest {
 			// 
 			// btnSMCWR
 			// 
+			this->btnSMCWR->Enabled = false;
 			this->btnSMCWR->Font = (gcnew System::Drawing::Font(L"Calibri", 7.875F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnSMCWR->Location = System::Drawing::Point(61, 549);
+			this->btnSMCWR->Location = System::Drawing::Point(61, 559);
 			this->btnSMCWR->Name = L"btnSMCWR";
 			this->btnSMCWR->Size = System::Drawing::Size(977, 36);
 			this->btnSMCWR->TabIndex = 20;
@@ -284,9 +298,10 @@ namespace DkTest {
 			// 
 			// btnSCAVTS
 			// 
+			this->btnSCAVTS->Enabled = false;
 			this->btnSCAVTS->Font = (gcnew System::Drawing::Font(L"Calibri", 7.875F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnSCAVTS->Location = System::Drawing::Point(61, 507);
+			this->btnSCAVTS->Location = System::Drawing::Point(61, 514);
 			this->btnSCAVTS->Name = L"btnSCAVTS";
 			this->btnSCAVTS->Size = System::Drawing::Size(977, 36);
 			this->btnSCAVTS->TabIndex = 19;
@@ -315,9 +330,9 @@ namespace DkTest {
 			this->groupBox1->Controls->Add(this->lblReturnVal);
 			this->groupBox1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Calibri", 7.875F));
-			this->groupBox1->Location = System::Drawing::Point(371, 154);
+			this->groupBox1->Location = System::Drawing::Point(424, 154);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(666, 235);
+			this->groupBox1->Size = System::Drawing::Size(613, 235);
 			this->groupBox1->TabIndex = 22;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Return Data";
@@ -327,7 +342,7 @@ namespace DkTest {
 			this->label11->AccessibleDescription = L"txtSCAVIDXE";
 			this->label11->AutoSize = true;
 			this->label11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label11->Location = System::Drawing::Point(418, 88);
+			this->label11->Location = System::Drawing::Point(417, 88);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(124, 26);
 			this->label11->TabIndex = 12;
@@ -338,7 +353,7 @@ namespace DkTest {
 			this->label9->AccessibleDescription = L"txtSCAVIDXE";
 			this->label9->AutoSize = true;
 			this->label9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label9->Location = System::Drawing::Point(28, 86);
+			this->label9->Location = System::Drawing::Point(24, 86);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(147, 26);
 			this->label9->TabIndex = 11;
@@ -349,7 +364,7 @@ namespace DkTest {
 			this->lblExecTime->AccessibleDescription = L"";
 			this->lblExecTime->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lblExecTime->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->lblExecTime->Location = System::Drawing::Point(241, 86);
+			this->lblExecTime->Location = System::Drawing::Point(240, 86);
 			this->lblExecTime->Name = L"lblExecTime";
 			this->lblExecTime->Size = System::Drawing::Size(171, 28);
 			this->lblExecTime->TabIndex = 10;
@@ -360,7 +375,7 @@ namespace DkTest {
 			this->label2->AccessibleDescription = L"txtSCAVIDXE";
 			this->label2->AutoSize = true;
 			this->label2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label2->Location = System::Drawing::Point(28, 49);
+			this->label2->Location = System::Drawing::Point(24, 49);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(207, 26);
 			this->label2->TabIndex = 9;
@@ -371,7 +386,7 @@ namespace DkTest {
 			this->lblReturnVal->AccessibleDescription = L"";
 			this->lblReturnVal->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lblReturnVal->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->lblReturnVal->Location = System::Drawing::Point(241, 49);
+			this->lblReturnVal->Location = System::Drawing::Point(240, 49);
 			this->lblReturnVal->Name = L"lblReturnVal";
 			this->lblReturnVal->Size = System::Drawing::Size(77, 28);
 			this->lblReturnVal->TabIndex = 8;
@@ -381,17 +396,89 @@ namespace DkTest {
 			// 
 			this->btnClose->Location = System::Drawing::Point(864, 627);
 			this->btnClose->Name = L"btnClose";
-			this->btnClose->Size = System::Drawing::Size(174, 33);
+			this->btnClose->Size = System::Drawing::Size(174, 46);
 			this->btnClose->TabIndex = 23;
 			this->btnClose->Text = L"Close";
 			this->btnClose->UseVisualStyleBackColor = true;
 			this->btnClose->Click += gcnew System::EventHandler(this, &DkForm::btnClose_Click);
+			// 
+			// label10
+			// 
+			this->label10->AccessibleDescription = L"txtSCAVIDXE";
+			this->label10->AutoSize = true;
+			this->label10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label10->Location = System::Drawing::Point(311, 164);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(67, 25);
+			this->label10->TabIndex = 24;
+			this->label10->Text = L"(float)";
+			// 
+			// label12
+			// 
+			this->label12->AccessibleDescription = L"txtSCAVIDXE";
+			this->label12->AutoSize = true;
+			this->label12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label12->Location = System::Drawing::Point(311, 203);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(88, 25);
+			this->label12->TabIndex = 25;
+			this->label12->Text = L"(UInt32)";
+			// 
+			// label13
+			// 
+			this->label13->AccessibleDescription = L"txtSCAVIDXE";
+			this->label13->AutoSize = true;
+			this->label13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label13->Location = System::Drawing::Point(311, 240);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(88, 25);
+			this->label13->TabIndex = 26;
+			this->label13->Text = L"(UInt32)";
+			// 
+			// label14
+			// 
+			this->label14->AccessibleDescription = L"txtSCAVIDXE";
+			this->label14->AutoSize = true;
+			this->label14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label14->Location = System::Drawing::Point(311, 274);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(67, 25);
+			this->label14->TabIndex = 27;
+			this->label14->Text = L"(float)";
+			// 
+			// label15
+			// 
+			this->label15->AccessibleDescription = L"txtSCAVIDXE";
+			this->label15->AutoSize = true;
+			this->label15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label15->Location = System::Drawing::Point(311, 310);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(67, 25);
+			this->label15->TabIndex = 28;
+			this->label15->Text = L"(float)";
+			// 
+			// label16
+			// 
+			this->label16->AccessibleDescription = L"txtSCAVIDXE";
+			this->label16->AutoSize = true;
+			this->label16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label16->Location = System::Drawing::Point(311, 348);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(88, 25);
+			this->label16->TabIndex = 29;
+			this->label16->Text = L"(UInt32)";
 			// 
 			// DkForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1088, 685);
+			this->Controls->Add(this->label16);
+			this->Controls->Add(this->label15);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->label10);
 			this->Controls->Add(this->btnClose);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->label1);

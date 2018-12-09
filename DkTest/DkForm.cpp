@@ -19,31 +19,32 @@ DkForm::DkForm(void)
 
 
 System::Void DkForm::btnSCAV_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	try {
-		dkProc->searchContinuityAboveValue(
-			Convert::ToDouble(txtData),
-			Convert::ToInt32(txtIDXB),
-			Convert::ToInt32(txtIDXE),
-			Convert::ToDouble(txtThresh1),
-			Convert::ToInt32(txtWinLen)
-		);
-	}
-	catch (...) {
-		MessageBox::Show("Error");
-	}
 
+
+	//try {
+		lblReturnVal->Text = Convert::ToString(dkProc->searchContinuityAboveValue(
+			Convert::ToDouble(txtData->Text),
+			Convert::ToInt32(txtIDXB->Text),
+			Convert::ToInt32(txtIDXE->Text),
+			Convert::ToDouble(txtThresh1->Text),
+			Convert::ToInt32(txtWinLen->Text))
+		);
+	//}
+	//catch (...) {
+	//	MessageBox::Show("Error");
+	//}
+		lblExecTime->Text = Convert::ToString(dkProc->GetLastExecTime());
 }
 
 System::Void DkForm::btnSCWR_Click(System::Object^  sender, System::EventArgs^  e) {
 	try {
 		dkProc->searchMultiContinuityWithinRange(
-			Convert::ToDouble(txtData),
-			Convert::ToInt32(txtIDXB),
-			Convert::ToInt32(txtIDXE),
-			Convert::ToDouble(txtThresh1),
-			Convert::ToDouble(txtThresh2),
-			Convert::ToInt32(txtWinLen)
+			Convert::ToDouble(txtData->Text),
+			Convert::ToInt32(txtIDXB->Text),
+			Convert::ToInt32(txtIDXE->Text),
+			Convert::ToDouble(txtThresh1->Text),
+			Convert::ToDouble(txtThresh2->Text),
+			Convert::ToInt32(txtWinLen->Text)
 		);
 	}
 	catch (...) {
@@ -54,13 +55,13 @@ System::Void DkForm::btnSCWR_Click(System::Object^  sender, System::EventArgs^  
 System::Void DkForm::btnSCAVTS_Click(System::Object^  sender, System::EventArgs^  e) {
 	try {
 		dkProc->searchContinuityAboveValueTwoSignals(
-			Convert::ToDouble(txtData),
-			Convert::ToDouble(txtData),
-			Convert::ToInt32(txtIDXB),
-			Convert::ToInt32(txtIDXE),
-			Convert::ToDouble(txtThresh1),
-			Convert::ToDouble(txtThresh2),
-			Convert::ToInt32(txtWinLen)
+			Convert::ToDouble(txtData->Text),
+			Convert::ToDouble(txtData->Text),
+			Convert::ToInt32(txtIDXB->Text),
+			Convert::ToInt32(txtIDXE->Text),
+			Convert::ToDouble(txtThresh1->Text),
+			Convert::ToDouble(txtThresh2->Text),
+			Convert::ToInt32(txtWinLen->Text)
 		);
 	}
 	catch (...) {
@@ -70,12 +71,12 @@ System::Void DkForm::btnSCAVTS_Click(System::Object^  sender, System::EventArgs^
 
 System::Void DkForm::btnSMCWR_Click(System::Object^  sender, System::EventArgs^  e) {
 	dkProc->searchMultiContinuityWithinRange(
-		Convert::ToDouble(txtData),
-		Convert::ToInt32(txtIDXB),
-		Convert::ToInt32(txtIDXE),
-		Convert::ToDouble(txtThresh1),
-		Convert::ToDouble(txtThresh2),
-		Convert::ToInt32(txtWinLen)
+		Convert::ToDouble(txtData->Text),
+		Convert::ToInt32(txtIDXB->Text),
+		Convert::ToInt32(txtIDXE->Text),
+		Convert::ToDouble(txtThresh1->Text),
+		Convert::ToDouble(txtThresh2->Text),
+		Convert::ToInt32(txtWinLen->Text)
 	);
 }
 
